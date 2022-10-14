@@ -9,10 +9,12 @@ body {
     width: 100%;
     min-height: 800px;
 }
+
 /* NavBar */
 .navbar {
     height: 80px;
     width: 70%;
+    min-width: 940px;
     padding-left: 15%;
     padding-right: 15%;
     background-color: black;
@@ -74,24 +76,23 @@ body {
     min-width: 450px;
 }
 #left-col {
-    min-width: 700px;
+    width: 55%;
     margin-right: 40px;
 }
 
 /* ID Tile */
 .id {
     margin-bottom: 40px;
-    /* overflow: hidden; */
     padding-bottom: 0.5px;
     box-shadow: 5px 5px black;
 }
 #id-header {
     background-color: rgb(0, 60, 255);
-    height: 150px;
+    height: 100px;
     display: flex;
 }
 .user-pfp {
-    margin-top: 75px;
+    margin-top: 25px;
     margin-left: 75px;
     border-radius: 50%;
     height: 150px;
@@ -103,8 +104,6 @@ body {
     margin: 4px 0px;
     border-left: 2px solid black;
     border-bottom: 2px solid black;
-    /* border-left: 2px solid silver;
-    border-bottom: 2px solid silver; */
 }
 .info h1, .info h3, .info p, .info a {
     margin: 20px 0px;
@@ -127,7 +126,6 @@ body {
 }
 #city {
     display: inline;
-    /* vertical-align: middle; */
 }
 #edit {
     height: 20px;
@@ -153,8 +151,6 @@ body {
     display: block;
     padding: 10px;
     margin: 4px 0px;
-    /* border-left: 2px solid silver;
-    border-bottom: 2px solid silver; */
     border-left: 2px solid black;
     border-bottom: 2px solid black;
 }
@@ -169,11 +165,10 @@ body {
     box-shadow: 5px 5px black;
 }
 .header {
+    height: 50px;
     padding: 10px;
-    /* background-color: silver; */
     background-color: black;
     color: white;
-    height: 50px;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -199,8 +194,6 @@ body {
     margin: 4px 0px;
     border-left: 2px solid black;
     border-bottom: 2px solid black;
-    /* border-left: 2px solid silver;
-    border-bottom: 2px solid silver; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -222,12 +215,8 @@ body {
     align-items: center;
     border-left: 2px solid black;
     border-bottom: 2px solid black;
-    /* border-left: 2px solid silver;
-    border-bottom: 2px solid silver; */
 }
 .pfp {
-    /* outline: 4px solid silver;
-    border: 4px solid white; */
     outline: 4px solid black;
     border: 4px solid white;
     height: 88px;
