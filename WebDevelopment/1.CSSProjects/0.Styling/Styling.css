@@ -1,0 +1,34 @@
+h1 {
+text-align: left;
+color: white;
+background-color: black;
+font-weight: 600;
+font-family: monospace;
+text-indent: 10px;
+}
+
+h1 span{
+    text-align: left;
+    color: cyan;
+    background-color: black;
+    font-weight: 600;
+    font-family: monospace;
+}
+
+h2 {
+font-style: italic;
+text-align: center;
+color: white;
+background-color: purple;
+font-weight: 300;
+font-family: sans-serif;
+}
+
+h3 {
+text-decoration: underline;
+color: black;
+background-color: lightblue;
+font-weight: 350;
+font-family: sans-serif;
+text-indent: 1800px;
+}
