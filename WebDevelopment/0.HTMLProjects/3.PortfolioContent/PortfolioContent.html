@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Henry Twichell</title>
+        <!--- Meta -->
+            <meta charset="UTF-8">
+            <meta name="description" content="Personal Portfolio">
+            <meta name="keywords" content="HTML, CSS, JavaScript">
+            <meta name="author" content="Henry Twichell">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--- Header -->
+            <h1>Henry (Hank) Twichell</h1>
+            <img src="headshot.jpg" width="150">
+        <link rel="stylesheet" href="stylesheet.css">
+        
+    </head>
+    <body>
+        <div> <!--- Socials -->
+            <a href="https://www.instagram.com/hanktwichell/"><img src="instagram.png" height="50"></a>
+            <a href="https://twitter.com/HankTwichell/"><img src="twitter.png" height="50"></a>
+            <a href="https://www.facebook.com/hanktwichell/"><img src="facebook.png" height="50"></a>
+            <br>
+        </div>
+        <div> <!--- About Me -->
+            <h2>About Me</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Soluta adipisci qui accusamus voluptate illum vel nemo 
+                excepturi possimus ut voluptates quis fuga, repudiandae 
+                rerum nostrum veritatis, hic fugiat illo odit.
+            </p>
+        </div>
+        <div> <!--- Favorites -->
+            <h2>My Favorites</h2>
+            <!--- Sports -->
+                <label>Sports</label>
+                <ul>
+                    <li>Ice Hockey</li>
+                    <li>Formula 1</li>
+                    <li>Football</li>
+                    <li>Soccer</li>
+                </ul>
+            <!--- Movies -->
+                <label>Movies</label>
+                <ol>
+                    <li>Pulp Fiction</li>
+                    <li>Inception</li>
+                    <li>Ted</li>
+                </ol>
+            <!--- Music Artists -->
+                <label>Music Artists</label>
+                <ul>
+                    <li>Post Malone</li>
+                    <li>Morgan Wallen</li>
+                    <li>Florida Georgia Line</li>
+                </ul>
+        </div>
+        <div> <!--- Education --> 
+            <h2>Education</h2>
+            <table>
+                <tr>
+                    <th>School</th>
+                    <th>Location</th>
+                    <th>Years</th>
+                </tr>
+                <tr> 
+                    <td>SHP</td>
+                    <td>California</td>
+                    <td>2016-2020</td>
+                </tr>
+                <tr>
+                    <td>WashU</td>
+                    <td>St. Louis, MO</td>
+                    <td>2020-Present</td>
+                </tr>
+            </table>
+            <br>
+        </div>
+        <div> <!--- Contact Me -->
+            <h3>Contact Me</h3>
+            <form action="/process" method="post">
+                <div>
+                    <label>Name: </label>
+                    <input type="text" name="name" placeholder="Your name...">
+                    <br>
+                </div>
+                <div>
+                    <label>Email Address: </label>
+                    <input type="text" email="email" placeholder="Email Address">
+                    <br>
+                </div>
+                <div>
+                    <label>Message: </label>
+                    <br>
+                    <textarea name="message" cols="30" rows="8"></textarea>
+                    <br>
+                </div>
+                <div>
+                    <input type="submit" value="Send"/>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
