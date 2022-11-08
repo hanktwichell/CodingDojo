@@ -1,0 +1,57 @@
+/* Page */
+* {
+    margin: 0px;
+    padding: 0px;
+    background-color: silver;
+    /* border: 1px solid black;
+    height: 1000px; */
+}
+
+/*  Blue Canvas */
+.canvas {
+    background-color: blue;
+    width: 880px;
+    height: 640px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    top: 50px;
+}
+
+/* White Boxes */
+.canvas > div {
+    background-color: white;
+    height: 280px;
+    display: flex;
+    position: absolute;
+}
+.wTop {
+    align-items: flex-start;
+    top: 0px;
+}
+.wBottom {
+    align-items: flex-end;
+    bottom: 0px;
+}
+#right {
+    width: 520px;
+    justify-content: flex-end;
+    right: 0px;
+}
+#left {
+    width: 280px;
+    justify-content: flex-start;
+    left: 0px;
+}
+
+/* Red Boxes */
+.red {
+    background-color: red;
+    height: 240px;
+}
+#small {
+    width: 240px;
+}
+#big {
+    width: 480px;
+}
