@@ -1,0 +1,13 @@
+TEXT First Name: *
+TEXT Last Name: *
+TEXT Email Address: *
+PASSWORD Password: *
+PASSWORD Confirm Password: *
+DATE Birthday
+RADIO Gender Identity
+    Male, Female, non-binary, I prefer not to answer
+TEXTAREA A short description about myself
+SELECT Favorite language
+CHECKBOX Yes, I would like to receive periodic email updates 
+BUTTON Create Account
+P *Indicates a required field
