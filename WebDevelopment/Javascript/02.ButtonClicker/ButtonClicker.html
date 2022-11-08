@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojonary</title>
+    <link rel="stylesheet" type="text/css" href="ButtonClicker.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <h1 class="dojonary">Dojonary</h1>
+            <input type="text" class="search-bar" placeholder="Search">
+            <button class="login" onclick="clickEvent()">Login</button>
+        </nav>
+        <main class="content">
+            <div class="left-column">
+                <div class="definition" id="def-1">
+                    <div class="specifics">
+                        <h1 class="word">ninja</h1>
+                        <h2 class="type">noun</h2>
+                        <h3 class="plural">Plural: ninjas</h3>
+                        <button class="likes" id="likes-1" onclick="addLike('1')">0 Likes</button>
+                        <button class="dislikes" id="dislikes-1" onclick="addDislike('1')">0 Dislikes</button>
+                    </div>
+                    <p class="defined">A practitioner skilled in the 
+                        <a class="key-term" id="Japanese" href="#">Japanese</a> 
+                        art of 
+                        <a class="key-term" id="ninjitsu" href="#">ninjitsu</a>
+                    </p>
+                </div>
+                <div class="definition" id="def-2">
+                    <div class="specifics">
+                        <h1 class="word">ninja</h1>
+                        <h2 class="type">noun</h2>
+                        <h3 class="plural">Plural: ninjas</h3>
+                        <button class="likes" id="likes-2" onclick="addLike('2')">0 Likes</button>
+                        <button class="dislikes" id="dislikes-2" onclick="addDislike('2')">0 Dislikes</button>
+                    </div>
+                    <p class="defined">A 
+                        <a class="key-term" id="programmer" href="#">programmer</a> 
+                        who breaks down problems with 
+                        <a class="key-term" id="zen" href="#">zen</a>-like focus
+                    </p>
+                </div>
+            </div>
+            <div class="advert">
+                <p id="ad-text">Dojonary is defined by <strong>YOU</strong></p>
+                <button id="defn-btn" onclick="hideButton()">Add Definition</button>
+            </div>
+        </main>
+    </div>
+    <script src="ButtonClicker.js"></script>
+</body>
+</html>

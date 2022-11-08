@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Likes Part II</title>
+    <link rel="stylesheet" href="LikesPartII.css">
+</head>
+<body>
+    <div class="website">
+        <nav class="navbar">
+            <h1 id="title">Network</h1>
+        </nav>
+        <div class="content">
+            <h1 id="heading">Your Feed</h1>
+            <div class="feed">
+                <div class="profile">
+                    <img id="pfp" src="user-circle.png" alt="user-pfp" height="100" width="100">
+                    <a href="#">Add an avatar</a>
+                    <h2 id="name">James Doe</h2>
+                </div>
+                <div class="feed-column">
+                    <div class="person" id="neil">
+                        <div class="person-head">
+                            <h2 class="name" id="neil-name">Neil M</h2>
+                            <div class="like-gui">
+                                <h3 class="likes" id="neil-likes">0 Likes</h3>
+                                <button class="like-btn" id="neil-btn" onclick="addLikes('#neil')">Like</button>
+                            </div>
+                        </div>
+                        <p class="feed-text" id="neil-text">I just set up this new discord bot, let me know what you all think. <a href="#">link</a></p>
+                    </div>
+                    <div class="person" id="nichole">
+                        <div class="person-head">
+                            <h2 class="name" id="nichole-name">Nichole K</h2>
+                            <div class="like-gui">
+                                <h3 class="likes" id="nichole-likes">0 Likes</h3>
+                                <button class="like-btn" id="nichole-btn" onclick="addLikes('#nichole')">Like</button>
+                            </div>    
+                        </div>
+                        <p class="feed-text" id="nichole-text">Just finished my <a href="#">next comic</a>, check it out.</p>
+                    </div>
+                    <div class="person" id="jim">
+                        <div class="person-head">
+                            <h2 class="name" id="jim-name">Jim R</h2>
+                            <div class="like-gui">
+                                <h3 class="likes" id="jim-likes">0 Likes</h3>
+                                <button class="like-btn" id="jim-btn" onclick="addLikes('#jim')">Like</button>
+                            </div>
+                        </div>
+                        <p class="feed-text" id="jim-text">I can't stop listening to the <a href="#">new album</a>. Who else is liking it?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="LikesPartII.js"></script>
+</body>
+</html>
