@@ -1,0 +1,63 @@
+use books;
+
+INSERT INTO users (id, first_name, last_name) 
+VALUES(1, 'Jane', 'Amsden');
+INSERT INTO users (id, first_name, last_name) 
+VALUES(2, 'Emily', 'Dixon');
+INSERT INTO users (id, first_name, last_name) 
+VALUES(3, 'Theodore', 'Dostoevsky');
+INSERT INTO users (id, first_name, last_name) 
+VALUES(4, 'William', 'Shapiro');
+INSERT INTO users (id, first_name, last_name) 
+VALUES(5, 'Lao', 'Xiu');
+
+INSERT INTO books (id, title) 
+VALUES(1, 'C Sharp');
+INSERT INTO books (id, title) 
+VALUES(2, 'Java');
+INSERT INTO books (id, title) 
+VALUES(3, 'Python');
+INSERT INTO books (id, title) 
+VALUES(4, 'PHP');
+INSERT INTO books (id, title) 
+VALUES(5, 'Ruby');
+
+UPDATE books
+SET title = 'C#'
+WHERE id = 1;
+
+UPDATE users
+SET first_name = 'Bill'
+WHERE id = 4;
+
+INSERT INTO favorites (user_id, book_id)
+VALUES (1,1), (1,2);
+
+INSERT INTO favorites (user_id, book_id)
+VALUES (2,1), (2,2), (2,3);
+
+INSERT INTO favorites (user_id, book_id)
+VALUES (3,1), (3,2), (3,3), (3,4);
+
+INSERT INTO favorites (user_id, book_id)
+VALUES (4,1), (4,2), (4,3), (4,4), (4,5);
+
+SELECT user_id
+FROM favorites
+WHERE book_id = 3;
+
+DELETE FROM favorites
+WHERE book_id = 3 
+ORDER BY user_id
+LIMIT 1;
+
+INSERT INTO favorites (user_id, book_id)
+VALUES (5,2);
+
+SELECT book_id
+FROM favorites
+WHERE user_id=3;
+
+SELECT user_id
+FROM favorites
+WHERE book_id = 5;
