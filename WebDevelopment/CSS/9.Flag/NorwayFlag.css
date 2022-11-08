@@ -1,0 +1,91 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    background-color: silver;
+}
+
+.canvas {
+    background-color: blue;
+    width: 880px;
+    height: 640px;
+    margin: 0 auto; /* centers div horizontally in page */
+    display: flex;
+    position: relative; /* changes "position: absolute" 
+    anchor from whole page to just this div */
+    top: 100px;
+}
+
+.rSmall {
+    background-color: red;
+    width: 240px;
+    height: 240px;
+}
+
+.rBig {
+    background-color: red;
+    width: 480px;
+    height: 240px;
+}
+
+.whiteTL {
+    background-color: white;
+    width: 280px;
+    height: 280px;
+    display: flex;
+    justify-content: flex-start; /* Horizontal Alignment */
+    align-items: flex-start; /* Vertical Alignment */
+}
+
+.whiteTR {
+    background-color: white;
+    width: 520px;
+    height: 280px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: absolute; /* positions whiteTR within canvas */
+    top: 0px;
+    right: 0px;
+}
+
+.whiteBR {
+    background-color: white;
+    width: 520px;
+    height: 280px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.whiteBL {
+    background-color: white;
+    width: 280px;
+    height: 280px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+/* Three Stripe Flag
+.stripe {
+    background-color: white;
+    height: 100px;
+    width: 500px;
+    flex: 1;
+    display: block;
+    display: flex;
+}
+
+.canvas :first-child {
+    background-color: red;
+}
+
+.canvas :last-child {
+    background-color: blue;
+} */
