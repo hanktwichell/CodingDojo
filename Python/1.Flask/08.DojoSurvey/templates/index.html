@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dojo Survey</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .content {
+            margin: 0 auto;
+            margin-top: 50px;
+            justify-content: space-around;
+            width: fit-content;
+            padding: 20px 25px;
+            background-color: rgb(78, 78, 78);
+            display: flex;
+            flex-direction: column;
+        }
+        h1 {
+            color: rgb(255, 191, 0);
+        }
+        form {
+            font-size: 22px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+        .block {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        input {
+            margin-bottom: 10px;
+            height: 30px;
+            border-radius: 5px;
+            font-size: 24px;
+            padding: 0px 5px;
+        }
+        select {
+            font-size: 22px;
+            height: 30px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        #submit {
+            padding: 10px;
+            width: fit-content;
+            height: fit-content;
+            justify-self: left;
+            background-color: rgb(255, 191, 0);
+        }
+        #gender-block, #belts-block {
+            display: inline-block;
+        }
+        #gender-block > input, #belts-block > input {
+            vertical-align: middle;
+            margin: 0px 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1 class="title">Dojo Survey</h1>
+        <form action="/users" method="post">
+            <div class="block" id="name-block">
+                <label for="name">Name:</label>
+                <input type="text" name="name">
+            </div>
+            <div class="block" id="gender-block">
+                <label for="gender">Gender:</label>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="Other">
+                <label for="other">Other</label>
+                <input type="radio" id="pnta" name="gender" value="Prefer Not To answer">
+                <label for="pnta">Prefer Not To Answer</label>
+            </div>
+            <div class="block" id="location-block">
+                <label for="location">Location:</label>
+                <select name="location">
+                    <option value="None Selected">-- Select A Location --</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Dallas">Dallas</option>
+                    <option value="San Jose">San Jose</option>
+                </select>
+            </div>
+            <div class="block" id="language-block">
+                <label for="language">Language:</label>
+                <select name="language">
+                    <option value="None Selected">-- Select A Language --</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="Javascript">Javascript</option>
+                    <option value="Python">Python</option>
+                </select>
+            </div>
+            <!-- <div class="block" id="belts-block">
+                <label for="belts">Belts:</label>
+                <input type="checkbox" id="yellow" name="yellow" value="Yellow Belt">
+                <label for="yellow">Yellow Belt</label>
+                <input type="checkbox" id="red" name="red" value="Red Belt">
+                <label for="red">Red Belt</label>
+                <input type="checkbox" id="black" name="black" value="Black Belt">
+                <label for="black">Black Belt</label>
+            </div> -->
+            <div class="block" id="comments-block">
+                <label for="comments">Comments:</label>
+                <input id="text" type="text" height="100" name="comments">
+            </div>
+            <input id="submit" type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Survey Results</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .content {
+            margin: 0 auto;
+            margin-top: 50px;
+            justify-content: space-around;
+            width: 500px;
+            height: fit-content;
+            padding: 20px 25px;
+            background-color: rgb(131, 131, 131);
+            display: flex;
+            flex-direction: column;
+        }
+        h1 {
+            color: rgb(8, 0, 255);
+        }
+        h3 {
+            color: white;
+            margin: 10px 0px;
+        }
+    </style>
+</head>
+<body> 
+    <div class="content">
+        <h1>Submitted Info:</h1>
+        <h3>Name: {{session['name']}}</h3>
+        <h3>Gender: {{session['gender']}}</h3>
+        <h3>Dojo Location: {{session['location']}}</h3>
+        <h3>Favorite Language: {{session['language']}}</h3>
+        <!-- <h3>Belts: {{session['belts']}}</h3> -->
+        <h3>Comments: {{session['comments']}}</h3>
+        <form action="/destroy_session" method="post">
+            <input type='submit' value='Go Back'>
+        </form>
+    </div>
+</body>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML TABLE</title>
+    <style>
+        table, th, td {
+            border: 2px solid black;
+            padding: 5px;
+        }
+        table {
+            border-spacing: 15px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th>Full name</th>
+        </tr>
+        <tbody>
+            {% for i in range(user|length) %}
+            <tr>
+                <td>{{user[i]['first_name']}}</td>
+                <td>{{user[i]['last_name']}}</td>
+                <td> {{user[i]['first_name']}} {{user[i]['last_name']}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
