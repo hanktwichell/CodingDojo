@@ -1,0 +1,27 @@
+Portfolio
+    Content
+        who i am x
+        favorite projects x
+        favorite music artists x
+        favorite sports x
+        favorite movies x
+    Include
+        HTML x
+        head x
+        title x
+        meta x
+        body x
+        div x
+        a x
+        p x
+        h1 x
+        ul x
+        ol x
+        li x
+        table x
+        tr x
+        th x
+        td x
+    At bottom of page, include a form that uses the following tags
+        form, label, textarea, input type="text", input type="submit"
+
