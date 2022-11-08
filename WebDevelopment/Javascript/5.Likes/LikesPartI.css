@@ -1,0 +1,40 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    padding-top: 75px;
+}
+.box {
+    border: 2px solid black;
+    display: block;
+    width: 50%;
+    font-family: sans-serif;
+    padding: 20px 50px;
+    height: 200px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+#like-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+}
+
+#btn {
+    background-color: rgb(255, 157, 0);
+    box-shadow: 2px 2px black;
+    padding: 5px;
+    width: 100px;
+    margin-left: 25px;
+    font-size: 24px;
+}
