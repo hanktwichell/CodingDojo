@@ -41,7 +41,6 @@ else:
 
 
 # Egyptian Rat Slap
-
 tricycle = Deck2()
 player3 = Player()
 player4 = Player()
