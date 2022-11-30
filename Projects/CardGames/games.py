@@ -39,8 +39,8 @@ def prizecard_war():
 prizecard_war()
 
 
-
 # Egyptian Rat Slap
+
 tricycle = Deck2()
 player3 = Player()
 player4 = Player()
@@ -81,26 +81,26 @@ def egyptian_rat_slap():
                 if (no_cards(player3)):
                     return "Player 4 Wins!"
                 c3 = player3.play_top_card()
-                print(f"3 {turns} {c3.get_abrv()}")
+                print(f"P3 T{turns} {c3.get_abrv()}")
                 in_play.insert(0, c3)
             else:
                 if (no_cards(player4)):
                     return "Player 3 Wins!"
                 c4 = player4.play_top_card()
-                print(f"4 {turns} {c4.get_abrv()}")
+                print(f"P4 T{turns} {c4.get_abrv()}")
                 in_play.insert(0, c4)
+            if (check_doubles(in_play, turns, honors)):
+                break
             if (in_play[0].point_val > 10):
                 facecard = True
                 countdown = in_play[0].point_val - 10
-            if (check_doubles(in_play, turns, honors)):
-                break
             turns += 1
         while facecard == True and countdown > 0:
             if ((turns + honors) % 2 == 1):
                 if (no_cards(player3)):
                     return "Player 4 Wins!"
                 c3 = player3.play_top_card()
-                print(f"3 {turns} {c3.get_abrv()} F")
+                print(f"P3 T{turns} *{c3.get_abrv()}*")
                 in_play.insert(0, c3)
                 if (check_doubles(in_play, turns, honors)):
                     break
@@ -113,7 +113,7 @@ def egyptian_rat_slap():
                 if (no_cards(player4)):
                     return "Player 3 Wins!"
                 c4 = player4.play_top_card()
-                print(f"4 {turns} {c4.get_abrv()} F")
+                print(f"P4 T{turns} *{c4.get_abrv()}*")
                 in_play.insert(0, c4)
                 if (check_doubles(in_play, turns, honors)):
                     break
