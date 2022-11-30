@@ -29,15 +29,15 @@ def prizecard_war():
         else:
             while len(in_play) > 0:
                 player2.add_prizecard(in_play.pop(0))
+    if (player1.num_prizecards() == player2.num_prizecards()):
+        print(f"It's a tie! {player1.num_prizecards()}-{player2.num_prizecards()}!")
+    elif (player1.num_prizecards() > player2.num_prizecards()):
+        print(f"Player 1 Won {player1.num_prizecards()}-{player2.num_prizecards()}! Congratulations!")
+    else:
+        print(f"Player 2 Won {player2.num_prizecards()}-{player1.num_prizecards()}! Congratulations!")
 
 prizecard_war()
 
-if (player1.num_prizecards() == player2.num_prizecards()):
-    print(f"It's a tie! {player1.num_prizecards()}-{player2.num_prizecards()}!")
-elif (player1.num_prizecards() > player2.num_prizecards()):
-    print(f"Player 1 Won {player1.num_prizecards()}-{player2.num_prizecards()}! Congratulations!")
-else:
-    print(f"Player 2 Won {player2.num_prizecards()}-{player1.num_prizecards()}! Congratulations!")
 
 
 # Egyptian Rat Slap
