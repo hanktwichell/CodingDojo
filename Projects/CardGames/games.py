@@ -47,17 +47,15 @@ player4 = Player()
 tricycle.shuffle()
 tricycle.deal(player3, player4)
 
-def check_doubles(in_play, turns, honors):
+def check_doubles(in_play, last_turn):
     if ((len(in_play) > 1 and in_play[0].point_val == in_play[1].point_val) or (len(in_play) > 2 and in_play[0].point_val == in_play[2].point_val)):
-        if ((turns + honors) % 2 == 1):
+        if (last_turn == 1):
             while len(in_play) > 0:
                 player3.add_card(in_play.pop(0))
-            honors = 1
             return True
         else:
             while len(in_play) > 0:
                 player4.add_card(in_play.pop(0))
-            honors = 0
             return True
     return False
 
@@ -73,23 +71,24 @@ def egyptian_rat_slap():
         countdown = 0
         rounds += 1
         turns = 0
-        print("")
-        print(f"Round {rounds}")
-        print(f"Cards Remaining: P3-{player3.get_hand_size()} P4-{player4.get_hand_size()}")
+        print(f"-- Round {rounds} | Cards: P3-{player3.get_hand_size()} P4-{player4.get_hand_size()} --")
         while facecard == False:
             if ((turns + honors) % 2 == 1):
                 if (no_cards(player3)):
                     return "Player 4 Wins!"
-                c3 = player3.play_top_card()
-                print(f"P3 T{turns} {c3.get_abrv()}")
-                in_play.insert(0, c3)
+                in_play.insert(0, player3.play_top_card())
+                print(f"P3 T{turns} {in_play[0].get_abrv()}")
+                
             else:
                 if (no_cards(player4)):
                     return "Player 3 Wins!"
-                c4 = player4.play_top_card()
-                print(f"P4 T{turns} {c4.get_abrv()}")
-                in_play.insert(0, c4)
-            if (check_doubles(in_play, turns, honors)):
+                in_play.insert(0, player4.play_top_card())
+                print(f"P4 T{turns} {in_play[0].get_abrv()}")
+            if (check_doubles(in_play, (turns + honors) % 2)):
+                if ((turns + honors) % 2 == 1):
+                    honors =  1
+                else:
+                    honors = 0
                 break
             if (in_play[0].point_val > 10):
                 facecard = True
@@ -99,29 +98,24 @@ def egyptian_rat_slap():
             if ((turns + honors) % 2 == 1):
                 if (no_cards(player3)):
                     return "Player 4 Wins!"
-                c3 = player3.play_top_card()
-                print(f"P3 T{turns} *{c3.get_abrv()}*")
-                in_play.insert(0, c3)
-                if (check_doubles(in_play, turns, honors)):
-                    break
-                if (c3.point_val > 10):
-                    countdown = c3.point_val - 10
-                    turns += 1
-                else:
-                    countdown -= 1
+                in_play.insert(0, player3.play_top_card())
+                print(f"P3 T{turns} {in_play[0].get_abrv()} *")
             else:
                 if (no_cards(player4)):
                     return "Player 3 Wins!"
-                c4 = player4.play_top_card()
-                print(f"P4 T{turns} *{c4.get_abrv()}*")
-                in_play.insert(0, c4)
-                if (check_doubles(in_play, turns, honors)):
-                    break
-                if (c4.point_val > 10):
-                    countdown = c4.point_val - 10
-                    turns += 1
-                else:
-                    countdown -= 1
+                in_play.insert(0, player4.play_top_card())
+                print(f"P4 T{turns} {in_play[0].get_abrv()} *")
+            if (check_doubles(in_play, (turns + honors)%2)):
+                if ((turns + honors) % 2 == 1):
+                    honors = 1
+                else: 
+                    honors = 0
+                break
+            if (in_play[0].point_val > 10):
+                countdown = in_play[0].point_val - 10
+                turns += 1
+            else:
+                countdown -= 1
         if (countdown == 0):
             if ((turns + honors) % 2 == 1):
                 while len(in_play) > 0:
